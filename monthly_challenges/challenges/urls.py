@@ -3,5 +3,6 @@ from . import views #This imports the views.py file in the same directory togeth
 
 urlpatterns = [
     path("january", views.january), #If the URL is /january, call the index function in views.py
-    path("february", views.february)
+    path("february", views.february),
+    path("<month>", views.monthly_challenge), #This will call the monthly_challenge function in views.py and pass the month as an argument
 ]
